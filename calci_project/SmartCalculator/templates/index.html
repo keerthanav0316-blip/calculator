@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>SmartCalc - Home</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+
+<body>
+
+    <div class="home-container">
+
+        <!-- Logo -->
+
+        <div class="logo">
+            🧮
+        </div>
+
+
+        <!-- Title -->
+
+        <h1>SmartCalc</h1>
+
+
+        <p class="subtitle">
+            Powerful Calculations Made Simple
+        </p>
+
+
+        <p class="description">
+            Choose the calculator you want to use
+        </p>
+
+
+        <!-- Calculator Cards -->
+
+        <div class="calculator-options">
+
+
+            <!-- Normal Calculator -->
+
+            <div class="calculator-card normal-card"
+                 onclick="openNormal()">
+
+                <div class="card-icon">
+                    🧮
+                </div>
+
+                <h2>
+                    Normal Calculator
+                </h2>
+
+                <p>
+                    Basic arithmetic calculations
+                </p>
+
+
+                <div class="features">
+
+                    <span>+</span>
+                    <span>−</span>
+                    <span>×</span>
+                    <span>÷</span>
+
+                </div>
+
+
+                <button>
+                    Open Calculator →
+                </button>
+
+            </div>
+
+
+
+            <!-- Scientific Calculator -->
+
+            <div class="calculator-card scientific-card"
+                 onclick="openScientific()">
+
+                <div class="card-icon">
+                    🔬
+                </div>
+
+                <h2>
+                    Scientific Calculator
+                </h2>
+
+                <p>
+                    Advanced mathematical calculations
+                </p>
+
+
+                <div class="features">
+
+                    <span>sin</span>
+                    <span>cos</span>
+                    <span>log</span>
+                    <span>√</span>
+
+                </div>
+
+
+                <button>
+                    Open Calculator →
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- Footer -->
+
+        <div class="footer">
+
+            <p>
+                SmartCalc • Python Calculator Project
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <script src="{{ url_for('static', filename='js/home.js') }}">
+    </script>
+
+</body>
+
+</html>
+<button class="theme-button"
+        onclick="toggleTheme()">
+    🌙 Theme
+</button>

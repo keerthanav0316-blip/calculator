@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Scientific Calculator</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+<div class="calculator-page">
+
+    <div class="calculator-container scientific-container">
+
+        <!-- TITLE -->
+
+        <h1 class="calculator-title">
+            🔬 Scientific Calculator
+        </h1>
+
+
+        <!-- ANGLE MODE -->
+
+        <div class="angle-mode">
+            DEG
+        </div>
+
+
+        <!-- DISPLAY -->
+
+        <input
+            type="text"
+            id="display"
+            class="display"
+            placeholder="0"
+            readonly
+        >
+
+
+        <!-- SCIENTIFIC BUTTONS -->
+
+        <div class="scientific-buttons">
+
+            <button
+                class="calc-btn function-btn"
+                onclick="scientific('sin')">
+                sin
+            </button>
+
+            <button
+                class="calc-btn function-btn"
+                onclick="scientific('cos')">
+                cos
+            </button>
+
+            <button
+                class="calc-btn function-btn"
+                onclick="scientific('tan')">
+                tan
+            </button>
+
+            <button
+                class="calc-btn function-btn"
+                onclick="scientific('log')">
+                log
+            </button>
+
+            <button
+                class="calc-btn function-btn"
+                onclick="scientific('ln')">
+                ln
+            </button>
+
+            <button
+                class="calc-btn function-btn"
+                onclick="scientific('sqrt')">
+                √
+            </button>
+
+            <button
+                class="calc-btn function-btn"
+                onclick="scientific('square')">
+                x²
+            </button>
+
+            <button
+                class="calc-btn function-btn"
+                onclick="add('**')">
+                xʸ
+            </button>
+
+            <button
+                class="calc-btn function-btn"
+                onclick="scientific('factorial')">
+                x!
+            </button>
+
+            <button
+                class="calc-btn function-btn"
+                onclick="scientific('inverse')">
+                1/x
+            </button>
+
+            <button
+                class="calc-btn function-btn"
+                onclick="add('pi')">
+                π
+            </button>
+
+            <button
+                class="calc-btn function-btn"
+                onclick="add('e')">
+                e
+            </button>
+
+        </div>
+
+
+        <!-- MAIN KEYPAD -->
+
+        <div class="scientific-keypad">
+
+            <!-- ROW 1 -->
+
+            <button
+                class="calc-btn clear"
+                onclick="clearDisplay()">
+                C
+            </button>
+
+            <button
+                class="calc-btn"
+                onclick="backspace()">
+                ⌫
+            </button>
+
+            <button
+                class="calc-btn operator"
+                onclick="add('(')">
+                (
+            </button>
+
+            <button
+                class="calc-btn operator"
+                onclick="add(')')">
+                )
+            </button>
+
+            <button
+                class="calc-btn operator"
+                onclick="add('%')">
+                %
+            </button>
+
+
+            <!-- ROW 2 -->
+
+            <button
+                class="calc-btn"
+                onclick="add('7')">
+                7
+            </button>
+
+            <button
+                class="calc-btn"
+                onclick="add('8')">
+                8
+            </button>
+
+            <button
+                class="calc-btn"
+                onclick="add('9')">
+                9
+            </button>
+
+            <button
+                class="calc-btn operator"
+                onclick="add('/')">
+                ÷
+            </button>
+
+            <button
+                class="calc-btn operator"
+                onclick="add('*')">
+                ×
+            </button>
+
+
+            <!-- ROW 3 -->
+
+            <button
+                class="calc-btn"
+                onclick="add('4')">
+                4
+            </button>
+
+            <button
+                class="calc-btn"
+                onclick="add('5')">
+                5
+            </button>
+
+            <button
+                class="calc-btn"
+                onclick="add('6')">
+                6
+            </button>
+
+            <button
+                class="calc-btn operator"
+                onclick="add('-')">
+                −
+            </button>
+
+            <button
+                class="calc-btn operator"
+                onclick="add('+')">
+                +
+            </button>
+
+
+            <!-- ROW 4 -->
+
+            <button
+                class="calc-btn"
+                onclick="add('1')">
+                1
+            </button>
+
+            <button
+                class="calc-btn"
+                onclick="add('2')">
+                2
+            </button>
+
+            <button
+                class="calc-btn"
+                onclick="add('3')">
+                3
+            </button>
+
+            <button
+                class="calc-btn"
+                onclick="add('0')">
+                0
+            </button>
+
+            <button
+                class="calc-btn"
+                onclick="add('.')">
+                .
+            </button>
+
+
+            <!-- EQUAL -->
+
+            <button
+                class="calc-btn equal equal-wide"
+                onclick="calculate()">
+                =
+            </button>
+
+        </div>
+
+
+        <!-- HISTORY -->
+
+        <div class="history-box">
+
+            <div class="history-header">
+
+                <h3>
+                    Calculation History
+                </h3>
+
+                <button onclick="clearHistory()">
+                    Clear
+                </button>
+
+            </div>
+
+            <div id="historyList">
+                <p>No calculations yet.</p>
+            </div>
+
+        </div>
+
+
+        <!-- BACK HOME -->
+
+        <a href="/" class="back-home">
+            ← Back to Home
+        </a>
+
+    </div>
+
+</div>
+
+
+<script src="{{ url_for('static', filename='js/scientific.js') }}"></script>
+
+</body>
+
+</html>

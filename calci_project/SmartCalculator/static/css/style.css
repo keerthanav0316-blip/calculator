@@ -1,0 +1,1102 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    min-height: 100vh;
+
+    background:
+        radial-gradient(
+            circle at top left,
+            #1e3a8a,
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at bottom right,
+            #581c87,
+            transparent 35%
+        ),
+        #020617;
+
+    color: white;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+}
+
+
+/* =========================
+   HOME CONTAINER
+========================= */
+
+.home-container {
+
+    width: 1100px;
+
+    min-height: 650px;
+
+    padding: 50px;
+
+    text-align: center;
+
+    background: rgba(15, 23, 42, 0.90);
+
+    border: 1px solid rgba(255, 255, 255, 0.10);
+
+    border-radius: 30px;
+
+    box-shadow:
+        0 25px 60px rgba(0, 0, 0, 0.5);
+
+    backdrop-filter: blur(15px);
+
+}
+
+
+/* =========================
+   LOGO
+========================= */
+
+.logo {
+
+    font-size: 65px;
+
+    margin-bottom: 10px;
+
+}
+
+
+/* =========================
+   TITLE
+========================= */
+
+h1 {
+    font-size: 48px;
+    font-weight: 800;
+
+    background: linear-gradient(
+        90deg,
+        #60a5fa,
+        #a78bfa
+    );
+
+    background-clip: text;
+    -webkit-background-clip: text;
+
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+}
+
+
+.subtitle {
+
+    margin-top: 10px;
+
+    font-size: 20px;
+
+    color: #cbd5e1;
+
+}
+
+
+.description {
+
+    margin-top: 8px;
+
+    color: #94a3b8;
+
+}
+
+
+/* =========================
+   CALCULATOR CARDS
+========================= */
+
+.calculator-options {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 30px;
+
+    margin-top: 45px;
+
+}
+
+
+.calculator-card {
+
+    width: 400px;
+
+    min-height: 300px;
+
+    padding: 35px;
+
+    border-radius: 25px;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.3s,
+        box-shadow 0.3s;
+
+    border: 1px solid
+        rgba(255, 255, 255, 0.10);
+
+}
+
+
+.calculator-card:hover {
+
+    transform: translateY(-10px);
+
+}
+
+
+/* =========================
+   NORMAL CARD
+========================= */
+
+.normal-card {
+
+    background:
+        linear-gradient(
+            145deg,
+            #172554,
+            #1d4ed8
+        );
+
+}
+
+
+.normal-card:hover {
+
+    box-shadow:
+        0 20px 50px
+        rgba(37, 99, 235, 0.4);
+
+}
+
+
+/* =========================
+   SCIENTIFIC CARD
+========================= */
+
+.scientific-card {
+
+    background:
+        linear-gradient(
+            145deg,
+            #3b0764,
+            #7e22ce
+        );
+
+}
+
+
+.scientific-card:hover {
+
+    box-shadow:
+        0 20px 50px
+        rgba(126, 34, 206, 0.4);
+
+}
+
+
+/* =========================
+   CARD ICON
+========================= */
+
+.card-icon {
+
+    font-size: 55px;
+
+    margin-bottom: 15px;
+
+}
+
+
+.calculator-card h2 {
+
+    font-size: 25px;
+
+    margin-bottom: 10px;
+
+}
+
+
+.calculator-card p {
+
+    color: #dbeafe;
+
+    margin-bottom: 25px;
+
+}
+
+
+/* =========================
+   FEATURES
+========================= */
+
+.features {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    margin-bottom: 25px;
+
+}
+
+
+.features span {
+
+    padding: 8px 13px;
+
+    background:
+        rgba(255, 255, 255, 0.12);
+
+    border-radius: 10px;
+
+    font-weight: bold;
+
+}
+
+
+/* =========================
+   CARD BUTTON
+========================= */
+
+.calculator-card button {
+
+    width: 100%;
+
+    padding: 13px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    background:
+        rgba(255, 255, 255, 0.15);
+
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+}
+
+
+.calculator-card button:hover {
+
+    background:
+        rgba(255, 255, 255, 0.25);
+
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer {
+
+    margin-top: 45px;
+
+    color: #64748b;
+
+    font-size: 14px;
+
+}
+
+
+/* =========================
+   CALCULATOR PAGE
+========================= */
+
+.calculator-page {
+
+    min-height: 100vh;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+}
+
+
+.calculator-container {
+
+    width: 500px;
+
+    padding: 30px;
+
+    background:
+        rgba(15, 23, 42, 0.95);
+
+    border-radius: 25px;
+
+    box-shadow:
+        0 25px 70px rgba(0, 0, 0, 0.5);
+
+}
+
+
+/* Calculator title */
+
+.calculator-title {
+
+    text-align: center;
+
+    font-size: 30px;
+
+    margin-bottom: 20px;
+
+}
+
+
+/* =========================
+   DISPLAY
+========================= */
+
+.display {
+
+    width: 100%;
+
+    height: 90px;
+
+    background: #020617;
+
+    border: 1px solid #334155;
+
+    border-radius: 15px;
+
+    color: white;
+
+    font-size: 35px;
+
+    text-align: right;
+
+    padding: 20px;
+
+    margin-bottom: 20px;
+
+}
+
+
+/* =========================
+   BUTTON GRID
+========================= */
+
+.buttons {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 10px;
+
+}
+
+
+.calc-btn {
+
+    height: 65px;
+
+    border: none;
+
+    border-radius: 15px;
+
+    background: #1e293b;
+
+    color: white;
+
+    font-size: 20px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+
+}
+
+
+.calc-btn:hover {
+
+    background: #334155;
+
+    transform: scale(1.03);
+
+}
+
+
+/* Operators */
+
+.operator {
+
+    background: #2563eb;
+
+}
+
+
+.operator:hover {
+
+    background: #1d4ed8;
+
+}
+
+
+/* Equal */
+
+.equal {
+
+    background: #16a34a;
+
+}
+
+
+.equal:hover {
+
+    background: #15803d;
+
+}
+
+
+/* Clear */
+
+.clear {
+
+    background: #dc2626;
+
+}
+
+
+.clear:hover {
+
+    background: #b91c1c;
+
+}
+
+
+/* Back Home */
+
+.back-home {
+
+    display: block;
+
+    text-align: center;
+
+    margin-top: 20px;
+
+    color: #93c5fd;
+
+    text-decoration: none;
+
+}
+
+
+.back-home:hover {
+
+    color: white;
+
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+
+    .home-container {
+
+        width: 95%;
+
+    }
+
+    .calculator-options {
+
+        flex-direction: column;
+
+        align-items: center;
+
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .calculator-card {
+
+        width: 100%;
+
+    }
+
+    .home-container {
+
+        padding: 25px;
+
+    }
+
+}
+/* =========================
+   HISTORY
+========================= */
+
+.history-box {
+
+    margin-top: 25px;
+
+    padding: 18px;
+
+    background: rgba(2, 6, 23, 0.8);
+
+    border: 1px solid #334155;
+
+    border-radius: 15px;
+
+}
+
+
+.history-header {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 12px;
+
+}
+
+
+.history-header h3 {
+
+    color: #cbd5e1;
+
+}
+
+
+.history-header button {
+
+    border: none;
+
+    background: #dc2626;
+
+    color: white;
+
+    padding: 7px 12px;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+}
+
+
+.history-header button:hover {
+
+    background: #b91c1c;
+
+}
+
+
+#historyList {
+
+    max-height: 150px;
+
+    overflow-y: auto;
+
+}
+
+
+.history-item {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    padding: 10px;
+
+    margin-bottom: 7px;
+
+    background: #1e293b;
+
+    border-radius: 8px;
+
+    color: #cbd5e1;
+
+}
+
+
+.history-item strong {
+
+    color: #60a5fa;
+
+}
+
+
+/* =========================
+   ANGLE MODE
+========================= */
+
+.angle-mode {
+
+    display: inline-block;
+
+    padding: 5px 12px;
+
+    margin-bottom: 10px;
+
+    border-radius: 8px;
+
+    background: #7e22ce;
+
+    color: white;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+}
+/* =========================
+   THEME BUTTON
+========================= */
+
+.theme-button {
+
+    position: absolute;
+
+    top: 25px;
+
+    right: 30px;
+
+    padding: 10px 16px;
+
+    border: 1px solid #475569;
+
+    border-radius: 10px;
+
+    background: #1e293b;
+
+    color: white;
+
+    cursor: pointer;
+
+}
+
+
+/* =========================
+   LIGHT MODE
+========================= */
+
+body.light-mode {
+
+    background: #f1f5f9;
+
+    color: #0f172a;
+
+}
+
+
+body.light-mode
+.home-container {
+
+    background: white;
+
+    color: #0f172a;
+
+}
+
+
+body.light-mode
+.calculator-container {
+
+    background: white;
+
+}
+
+
+body.light-mode
+.display {
+
+    background: #e2e8f0;
+
+    color: #0f172a;
+
+}
+
+
+body.light-mode
+.calc-btn {
+
+    background: #e2e8f0;
+
+    color: #0f172a;
+
+}
+/* =========================================
+   SCIENTIFIC CALCULATOR
+========================================= */
+
+.scientific-container {
+
+    width: 760px;
+
+}
+
+
+/* Scientific function buttons */
+
+.scientific-buttons {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(6, 1fr);
+
+    gap: 10px;
+
+    margin-bottom: 15px;
+
+}
+
+
+.function-btn {
+
+    background:
+        linear-gradient(
+            145deg,
+            #581c87,
+            #7e22ce
+        );
+
+    font-size: 17px;
+
+}
+
+
+.function-btn:hover {
+
+    background:
+        linear-gradient(
+            145deg,
+            #6b21a8,
+            #9333ea
+        );
+
+}
+
+
+/* Scientific keypad */
+
+.scientific-keypad {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(5, 1fr);
+
+    gap: 10px;
+
+}
+
+
+/* Equal button */
+
+.equal-wide {
+
+    grid-column:
+        span 5;
+
+}
+
+
+/* Degree mode */
+
+.angle-mode {
+
+    display: block;
+
+    width: fit-content;
+
+    margin: 0 auto 10px auto;
+
+    padding: 6px 15px;
+
+    border-radius: 8px;
+
+    background: #7e22ce;
+
+    color: white;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+}
+
+
+/* Mobile */
+
+@media (max-width: 800px) {
+
+    .scientific-container {
+
+        width: 95%;
+
+    }
+
+
+    .scientific-buttons {
+
+        grid-template-columns:
+            repeat(3, 1fr);
+
+    }
+
+
+    .scientific-keypad {
+
+        grid-template-columns:
+            repeat(5, 1fr);
+
+    }
+
+}
+/* ==========================================
+   SCIENTIFIC CALCULATOR
+========================================== */
+
+.scientific-container {
+
+    width: 760px;
+
+    max-width: 95%;
+
+}
+
+
+/* Scientific functions */
+
+.scientific-buttons {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(6, 1fr);
+
+    gap: 10px;
+
+    margin-bottom: 15px;
+
+}
+
+
+.function-btn {
+
+    background: #4c1d95;
+
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+}
+
+
+.function-btn:hover {
+
+    background: #6d28d9;
+
+    transform: translateY(-2px);
+
+}
+
+
+/* Main keypad */
+
+.scientific-keypad {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(5, 1fr);
+
+    gap: 10px;
+
+}
+
+
+/* Equal */
+
+.equal-wide {
+
+    grid-column: span 5;
+
+}
+
+
+/* DEG */
+
+.angle-mode {
+
+    display: inline-block;
+
+    margin: 5px auto 12px auto;
+
+    padding: 6px 14px;
+
+    border-radius: 8px;
+
+    background: #7c3aed;
+
+    color: white;
+
+    font-weight: bold;
+
+    font-size: 13px;
+
+}
+
+
+/* History */
+
+.history-box {
+
+    margin-top: 25px;
+
+    padding: 18px;
+
+    border-radius: 15px;
+
+    background: rgba(15, 23, 42, 0.9);
+
+    border: 1px solid #334155;
+
+}
+
+
+.history-header {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+}
+
+
+.history-header h3 {
+
+    color: white;
+
+    margin: 0;
+
+}
+
+
+.history-header button {
+
+    border: none;
+
+    padding: 7px 12px;
+
+    border-radius: 8px;
+
+    background: #dc2626;
+
+    color: white;
+
+    cursor: pointer;
+
+}
+
+
+.history-item {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    padding: 10px;
+
+    margin-top: 8px;
+
+    background: #1e293b;
+
+    border-radius: 8px;
+
+    color: #cbd5e1;
+
+}
+
+
+.history-item strong {
+
+    color: #60a5fa;
+
+}
+
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 700px) {
+
+    .scientific-container {
+
+        width: 95%;
+
+    }
+
+
+    .scientific-buttons {
+
+        grid-template-columns:
+            repeat(3, 1fr);
+
+    }
+
+
+    .scientific-keypad {
+
+        grid-template-columns:
+            repeat(5, 1fr);
+
+    }
+
+
+    .calc-btn {
+
+        font-size: 14px;
+
+    }
+
+}
